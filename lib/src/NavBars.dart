@@ -18,7 +18,7 @@ class DotNavigationBar extends StatelessWidget {
     this.dotIndicatorColor,
     this.marginR = const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
     this.paddingR = const EdgeInsets.only(bottom: 5, top: 10),
-    this.borderRadius = 30,
+    this.borderRadius,
     this.splashBorderRadius,
     this.backgroundColor = Colors.white,
     this.boxShadow = const [
@@ -71,7 +71,7 @@ class DotNavigationBar extends StatelessWidget {
   final EdgeInsetsGeometry? paddingR;
 
   /// border radius
-  final double? borderRadius;
+  final BorderRadius? borderRadius;
 
   ///bgd colors for the nav bar
   final Color? backgroundColor;
@@ -106,7 +106,7 @@ class DotNavigationBar extends StatelessWidget {
                   child: Container(
                     padding: paddingR,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(borderRadius!),
+                      borderRadius: borderRadius,
                       color: backgroundColor,
                       boxShadow: boxShadow,
                     ),
