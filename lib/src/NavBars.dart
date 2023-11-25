@@ -71,7 +71,7 @@ class DotNavigationBar extends StatelessWidget {
   final EdgeInsetsGeometry? paddingR;
 
   /// border radius
-  final BorderRadius? borderRadius;
+  final BorderRadiusDirectional? borderRadius;
 
   ///bgd colors for the nav bar
   final Color? backgroundColor;
