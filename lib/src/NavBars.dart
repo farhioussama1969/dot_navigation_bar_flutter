@@ -95,43 +95,39 @@ class DotNavigationBar extends StatelessWidget {
     final theme = Theme.of(context);
 
     return enableFloatingNavBar
-        ? BottomAppBar(
-            color: Colors.transparent,
-            elevation: 0,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Padding(
-                  padding: marginR!,
-                  child: Container(
-                    padding: paddingR,
-                    decoration: BoxDecoration(
-                      borderRadius: borderRadius,
-                      color: backgroundColor,
-                      boxShadow: boxShadow,
-                    ),
-                    width: double.infinity,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Body(
-                          items: items,
-                          currentIndex: currentIndex,
-                          curve: curve,
-                          duration: duration,
-                          selectedItemColor: selectedItemColor,
-                          theme: theme,
-                          unselectedItemColor: unselectedItemColor,
-                          onTap: onTap!,
-                          itemPadding: itemPadding,
-                          dotIndicatorColor: dotIndicatorColor,
-                          enablePaddingAnimation: enablePaddingAnimation,
-                          splashColor: splashColor,
-                          splashBorderRadius: splashBorderRadius),
-                    ),
+        ? Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Padding(
+                padding: marginR!,
+                child: Container(
+                  padding: paddingR,
+                  decoration: BoxDecoration(
+                    borderRadius: borderRadius,
+                    color: backgroundColor,
+                    boxShadow: boxShadow,
+                  ),
+                  width: double.infinity,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Body(
+                        items: items,
+                        currentIndex: currentIndex,
+                        curve: curve,
+                        duration: duration,
+                        selectedItemColor: selectedItemColor,
+                        theme: theme,
+                        unselectedItemColor: unselectedItemColor,
+                        onTap: onTap!,
+                        itemPadding: itemPadding,
+                        dotIndicatorColor: dotIndicatorColor,
+                        enablePaddingAnimation: enablePaddingAnimation,
+                        splashColor: splashColor,
+                        splashBorderRadius: splashBorderRadius),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           )
         : Container(
             //padding: EdgeInsets.symmetric(vertical: 12),
